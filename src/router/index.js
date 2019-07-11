@@ -15,13 +15,7 @@ export default new Router({
     },
     {
       path:'/about',
-      component: About,
-      children:[
-        {
-          path: 'news',
-          component: News
-        }
-      ]
+      component: About
     },
     {
       path:'/home',
@@ -30,6 +24,10 @@ export default new Router({
         {
           path: 'message',
           component: Message
+        },
+        {
+          path: 'news',
+          component: News
         }
       ]
     }

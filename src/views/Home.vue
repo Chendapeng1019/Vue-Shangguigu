@@ -2,7 +2,11 @@
     <div>
       Home
       <div>
-        <router-link to="/home/message">message</router-link>
+        <uL class="nav nav-tabs">
+          <router-link to="/home/news">News</router-link>
+          <router-link to="/home/message">Message</router-link>
+        </uL>
+
         <router-view></router-view>
       </div>
     </div>

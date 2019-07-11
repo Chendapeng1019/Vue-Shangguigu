@@ -1,8 +1,9 @@
 <template>
     <div>
       About
-      <router-link to="/about/news">news</router-link>
-      <router-view></router-view>
+      <div>
+        <input type="text"/>
+      </div>
     </div>
 </template>
 
