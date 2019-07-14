@@ -1,47 +1,38 @@
 <template>
-  <div>
-    <div class="row">
-      <div class="col-xs-offset-2 col-xs-8">
-        <div class="page-header"><h2>Router Basic</h2></div>
+    <div class="todo-container">
+      <div class="todo-wrap">
+        <!--  给TodoHeader标签对象绑定addItems时间监听   -->
+        <todo-header />
+        <todo-list /> ></todo-list>
+        <todo-footer />
       </div>
     </div>
-
-    <div class="row">
-      <div class="col-xs-2 col-xs-offset-2">
-        <div class="list-group">
-          <!--生成路由链接-->
-          <router-link to="/about" class="list-group-item">About</router-link>
-          <router-link to="/home" class="list-group-item">Home</router-link>
-        </div>
-      </div>
-
-
-
-      <div class="col-xs-6">
-        <div class="panel">
-          <div class="panel-body">
-            <!--显示当前组件-->
-            <keep-alive>
-              <router-view></router-view>
-            </keep-alive>
-          </div>
-        </div>
-      </div>
-
-
-    </div>
-  </div>
-
 </template>
+<!--
+绑定事件监听  ---- 订阅消息
+触发事件 ---- 发布消息
+-->
 
 <script>
-  export default {
-    name: "App",
-    components: {
+
+ import TodoFooter from './components/TodoFooter'
+ import TodoHeader from './components/TodoHeader'
+ import TodoList from './components/TodoList'
+
+export default {
+  name: 'App',
+  components: {
+    TodoFooter,
+    TodoHeader,
+    TodoList
+  },
+  data() {
+    return {
     }
   }
+}
 </script>
 
-<style scoped>
+<style>
 
 </style>

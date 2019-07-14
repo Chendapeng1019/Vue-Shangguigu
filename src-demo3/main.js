@@ -4,8 +4,8 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 import 'bootstrap/dist/css/bootstrap.css'
-import './css/index.css'
-import store from './store'
+
+//注册成标签（全局）
 
 Vue.config.productionTip = false
 
@@ -14,6 +14,6 @@ new Vue({
   el: '#app',
   router,
   components: { App },
-  template: '<App/>',
-  store
+  template: '<App/>'
+
 })

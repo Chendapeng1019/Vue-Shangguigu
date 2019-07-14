@@ -3,9 +3,10 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
-import 'bootstrap/dist/css/bootstrap.css'
-import './css/index.css'
 import store from './store'
+import 'bootstrap/dist/css/bootstrap.css'
+
+//注册成标签（全局）
 
 Vue.config.productionTip = false
 
@@ -15,5 +16,6 @@ new Vue({
   router,
   components: { App },
   template: '<App/>',
-  store
+  store  //所有的组件对象都多了一个属性 ：$store
+
 })
